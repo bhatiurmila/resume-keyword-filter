@@ -37,7 +37,7 @@ export default function App() {
   return (
     <>
       <div className="hero">
-        <h1><i className="bi bi-file-earmark-person me-2"></i>Resume Keyword Ranker</h1>
+        <h1><i className="bi bi-file-earmark-person me-2"></i>Resume Keyword Filter</h1>
         <p>Upload resumes, enter job keywords, and instantly see who ranks highest.</p>
       </div>
 

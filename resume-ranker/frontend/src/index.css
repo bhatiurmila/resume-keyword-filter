@@ -1,0 +1,92 @@
+body {
+  background: #f0f4f8;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.hero {
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  color: white;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.hero h1 { font-size: 2.2rem; font-weight: 700; }
+.hero p  { color: #a0aec0; }
+
+.card-panel {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.drop-zone {
+  border: 2px dashed #4a90e2;
+  border-radius: 10px;
+  padding: 2.5rem;
+  text-align: center;
+  cursor: pointer;
+  color: #4a90e2;
+  transition: background 0.2s;
+}
+
+.drop-zone.over { background: #ebf4ff; }
+.drop-zone i { font-size: 2.5rem; display: block; margin-bottom: 0.4rem; }
+
+.file-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 0.9rem;
+}
+
+.rank-card {
+  background: white;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  transition: transform 0.15s;
+}
+
+.rank-card:hover { transform: translateY(-2px); }
+
+.rank-badge {
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 1rem; flex-shrink: 0;
+}
+
+.r1 { background: #ffd700; color: #333; }
+.r2 { background: #c0c0c0; color: #333; }
+.r3 { background: #cd7f32; color: white; }
+.rn { background: #e2e8f0; color: #555; }
+
+.score-wrap { flex: 1; }
+.score-name { font-weight: 600; margin-bottom: 0.2rem; }
+.score-meta { font-size: 0.8rem; color: #718096; }
+
+.progress { height: 8px; border-radius: 4px; margin: 0.3rem 0; }
+
+.score-pct {
+  font-size: 1.4rem; font-weight: 700;
+  color: #2d3748; min-width: 58px; text-align: right;
+}
+
+.tag {
+  display: inline-block;
+  border-radius: 20px;
+  padding: 2px 10px;
+  font-size: 0.75rem;
+  margin: 2px;
+}
+
+.tag-hit  { background: #ebf8ff; color: #2b6cb0; }
+.tag-miss { background: #fff5f5; color: #c53030; }

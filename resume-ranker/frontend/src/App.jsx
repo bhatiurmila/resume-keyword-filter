@@ -8,19 +8,19 @@ const API = 'http://127.0.0.1:8000'
 
 export default function App() {
   const [files, setFiles]       = useState([])
-  const [keywords, setKeywords] = useState('')
+  const [keywords, setKeywords] = useState([])  // [{ keyword, weight }]
   const [results, setResults]   = useState([])
   const [loading, setLoading]   = useState(false)
   const [error, setError]       = useState('')
 
   const analyze = async () => {
     setError('')
-    if (!keywords.trim()) return setError('Please enter at least one keyword.')
+    if (!keywords.length) return setError('Please add at least one keyword.')
     if (!files.length)    return setError('Please upload at least one resume.')
 
     const form = new FormData()
     files.forEach(f => form.append('files', f))
-    form.append('keywords', keywords)
+    form.append('keywords', JSON.stringify(keywords))
 
     setLoading(true)
     setResults([])
@@ -37,8 +37,8 @@ export default function App() {
   return (
     <>
       <div className="hero">
-        <h1><i className="bi bi-file-earmark-person me-2"></i>Resume Keyword Filter</h1>
-        <p>Upload resumes, enter job keywords, and instantly see who ranks highest.</p>
+        <h1><i className="bi bi-file-earmark-person me-2"></i>Resume Keyword Ranker</h1>
+        <p>Upload resumes, set keyword weights, and instantly see who ranks highest.</p>
       </div>
 
       <div className="container py-5">
@@ -46,7 +46,7 @@ export default function App() {
           <div className="col-lg-8">
 
             <UploadZone files={files} setFiles={setFiles} />
-            <KeywordInput value={keywords} onChange={setKeywords} />
+            <KeywordInput keywords={keywords} setKeywords={setKeywords} />
 
             {error && (
               <div className="alert alert-danger d-flex align-items-center gap-2">

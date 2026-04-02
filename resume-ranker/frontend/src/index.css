@@ -90,3 +90,69 @@ body {
 
 .tag-hit  { background: #ebf8ff; color: #2b6cb0; }
 .tag-miss { background: #fff5f5; color: #c53030; }
+
+/* Keyword weight table */
+.keyword-table { margin-top: 0.5rem; }
+
+.kw-header {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 1rem;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #718096;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.kw-row {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem;
+  border-bottom: 1px solid #f7fafc;
+}
+
+.kw-row:hover { background: #f7fafc; }
+
+.kw-name { font-size: 0.9rem; }
+
+.kw-weights {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.weight-btn {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  font-size: 0.8rem;
+  border-radius: 50%;
+}
+
+.weight-label {
+  font-size: 0.75rem;
+  min-width: 90px;
+}
+
+/* keyword tags with meta */
+.tag-meta {
+  margin-left: 4px;
+  font-size: 0.7rem;
+  opacity: 0.7;
+}
+
+/* breakdown table */
+.breakdown-table {
+  font-size: 0.82rem;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.breakdown-table thead th {
+  background: #f7fafc;
+  color: #4a5568;
+  font-weight: 600;
+}

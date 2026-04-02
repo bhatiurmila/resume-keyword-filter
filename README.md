@@ -1,4 +1,4 @@
-project number: 1 
+Project number: 1 
 <br>
 <bold>Resume Keyword Ranker<bold>
 <br>
@@ -10,7 +10,9 @@ Members:
 2. Budige Priyanka
 3. Choulkar Bhargavi
 <br>
+<br>
 A full-stack application that allows users to upload PDF resumes, enter specific job keywords, and automatically rank the candidates based on a calculated match score.
+<br>
 <br>
 <bold>Features:<bold>
 <br>
@@ -24,7 +26,8 @@ A full-stack application that allows users to upload PDF resumes, enter specific
 <br>
 ->Data Storage
 <br>
-<bold>Prerequisites<bold
+<br>
+<bold>Prerequisites<bold>
 <br>
 Python 3.8+
 <br>
